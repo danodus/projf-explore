@@ -27,7 +27,7 @@ colour: colour.fs
 
 # place and route
 %.config: %.json
-	nextpnr-himbaechel --device ${FPGA_DEVICE} --vopt family=${FPGA_FAMILY} --freq ${TARGET_FREQ} --json $< --write $@ --vopt cst=${CST} --randomize-seed
+	nextpnr-himbaechel --device ${FPGA_DEVICE} --vopt family=${FPGA_FAMILY} --freq ${TARGET_FREQ} --json $< --write $@ --vopt cst=${CST} --pre-pack pre_pack.py --randomize-seed
 
 # pack bitstream
 %.fs: %.config
