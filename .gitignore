@@ -19,6 +19,9 @@ webtalk.*
 *.bit
 *.svf
 
+# GW2A
+*.fs
+
 # Verilator
 obj_dir
 

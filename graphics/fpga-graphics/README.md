@@ -157,6 +157,25 @@ ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", GROUP="dialout", MODE="666"
 
 You need to reinsert the USB cable for the new udev config to take effect.
 
+## Tang Nano 20K Build
+
+I have tested these designs with recent (late 2024) versions of Yosys and nextpnr. You can get pre-built binaries for Linux, Mac, and Windows from [YosysHQ OSS CAD Suite](https://github.com/YosysHQ/oss-cad-suite-build).
+
+Once the tools are installed, it's straightforward to build the designs.
+
+For example, to build `square`; clone the projf-explore git repo, check the correct FPGA model is set near the top of `projf-explore/graphics/fpga-graphics/gw2a/Makefile` then:
+
+```shell
+cd projf-explore/graphics/fpga-graphics/gw2a
+make square
+```
+
+After the build completes, you'll have a fs file, such as `square.fs`. Use the fs file to program your board:
+
+```shell
+openFPGALoader --board=tangnano20k square.fs
+```
+
 ## Verilator SDL Simulation
 
 You can simulate these designs on your computer using Verilator and SDL. The [Simulation README](sim/README.md) has build instructions.

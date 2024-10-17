@@ -1,0 +1,21 @@
+## Project F: FPGA Graphics - Tang Nano 20K Board Constraints
+## Copyright Will Green, open source hardware released under the MIT License
+## Learn more at https://projectf.io/posts/fpga-graphics/
+
+// Board Clock: 27 MHz
+IO_LOC "clk_27m" 4;
+IO_PORT "clk_27m" PULL_MODE=NONE;
+
+// Buttons
+IO_LOC "btn_rst" 88;
+IO_PORT "btn_rst" PULL_MODE=UP;
+
+// HDMI
+IO_LOC "gpdi_dp[0]" 35,36;
+IO_PORT "gpdi_dp[0]" PULL_MODE=NONE;
+IO_LOC "gpdi_dp[1]" 37,38;
+IO_PORT "gpdi_dp[1]" PULL_MODE=NONE;
+IO_LOC "gpdi_dp[2]" 39,40;
+IO_PORT "gpdi_dp[2]" PULL_MODE=NONE;
+IO_LOC "gpdi_dp[3]" 33,34;
+IO_PORT "gpdi_dp[3]" PULL_MODE=NONE;
